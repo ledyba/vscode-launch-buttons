@@ -1,25 +1,51 @@
 {
-  "name": "build-run-debug-test-button",
-  "displayName": "Build/Run/Debug/Test button",
-  "description": "Add build/run/debug/test button to your vscode.",
+  "name": "launch-buttons",
+  "displayName": "Launch buttons",
+  "description": "Add run/debug button to your vscode to execute commands in launch.json.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.56.0"
   },
   "categories": [
-    "Other"
+    "Programming Languages"
   ],
   "activationEvents": [
-    "onCommand:build-run-debug-test-button.helloWorld"
-  ],
+		"workspaceContains:.vscode/launch.json"
+	],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "build-run-debug-test-button.helloWorld",
-        "title": "Hello World"
+        "command": "launch-buttons.run",
+        "title": "Launch: 00_Run",
+        "category": "navigation",
+        "icon": {
+          "light": "images/build_black_24dp.svg",
+          "dark": "images/build_white_24dp.svg"
+        }
+      },
+      {
+        "command": "launch-buttons.debug",
+        "title": "Launch: 01_Debug",
+        "category": "navigation",
+        "icon": {
+          "light": "images/build_black_24dp.svg",
+          "dark": "images/build_white_24dp.svg"
+        }
       }
-    ]
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "launch-buttons.run",
+          "group": "navigation"
+        },
+        {
+          "command": "launch-buttons.debug",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
