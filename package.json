@@ -2,7 +2,14 @@
   "name": "launch-buttons",
   "displayName": "Launch buttons",
   "description": "Add run/debug button to your vscode to execute commands in launch.json.",
-  "version": "0.0.1",
+  "author": "Kaede Fujisaki",
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/ledyba/vscode-launch-buttons",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/ledyba/vscode-launch-buttons.git"
+  },
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.56.0"
   },
@@ -52,7 +59,9 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts"
+    "lint": "eslint src --ext ts",
+    "package": "vsce package",
+    "publish": "vsce package"
   },
   "devDependencies": {
     "@types/node": "^12.11.7",
@@ -60,6 +69,7 @@
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
     "eslint": "^7.19.0",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "vsce": "^1.88.0"
   }
 }
