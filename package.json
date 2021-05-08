@@ -20,8 +20,8 @@
         "title": "Launch: 00_Run",
         "category": "navigation",
         "icon": {
-          "light": "images/build_black_24dp.svg",
-          "dark": "images/build_white_24dp.svg"
+          "light": "images/run.light.svg",
+          "dark": "images/run.dark.svg"
         }
       },
       {
@@ -29,8 +29,8 @@
         "title": "Launch: 01_Debug",
         "category": "navigation",
         "icon": {
-          "light": "images/build_black_24dp.svg",
-          "dark": "images/build_white_24dp.svg"
+          "light": "images/debug.light.svg",
+          "dark": "images/debug.dark.svg"
         }
       }
     ],
