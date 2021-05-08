@@ -8,8 +8,8 @@
   "license": "BSD-2-Clause",
   "homepage": "https://github.com/ledyba/vscode-launch-buttons",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/ledyba/vscode-launch-buttons.git"
+    "type": "git",
+    "url": "https://github.com/ledyba/vscode-launch-buttons.git"
   },
   "version": "1.0.0",
   "engines": {
@@ -19,7 +19,8 @@
     "Programming Languages"
   ],
   "activationEvents": [
-    "workspaceContains:.vscode/launch.json"
+    "workspaceContains:.vscode/launch.json",
+    "workspaceContains:.vscode/task.json"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -46,10 +47,12 @@
     "menus": {
       "editor/title": [
         {
+          "when": "launch-buttons.enabled",
           "command": "launch-buttons.run",
           "group": "navigation"
         },
         {
+          "when": "launch-buttons.enabled",
           "command": "launch-buttons.debug",
           "group": "navigation"
         }
