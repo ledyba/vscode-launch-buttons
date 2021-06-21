@@ -66,7 +66,8 @@
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "package": "vsce package",
-    "publish": "vsce package"
+    "publish": "vsce package",
+    "up": "npm-check-updates -u && npm install && npm dedupe && npm audit fix"
   },
   "devDependencies": {
     "@types/node": "^12.11.7",
