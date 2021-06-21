@@ -5,13 +5,13 @@
   "displayName": "Launch buttons",
   "description": "Add run/debug button to your vscode to execute commands in launch.json.",
   "author": "Kaede Fujisaki",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "homepage": "https://github.com/ledyba/vscode-launch-buttons",
   "repository": {
     "type": "git",
     "url": "https://github.com/ledyba/vscode-launch-buttons.git"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "engines": {
     "vscode": "^1.56.0"
   },
