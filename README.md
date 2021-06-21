@@ -28,12 +28,6 @@ These icons are drawn by myself:
  - images/run.light.svg
  - images/run.dark.svg
 
-## Release Notes
+# LICENSE
 
-### 1.0.1
-
-Add capability to spawn a task in `task.json`.
-
-### 1.0.0
-
-Initial release.
+MIT
