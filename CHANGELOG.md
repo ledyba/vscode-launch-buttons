@@ -6,7 +6,15 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.4]
+
+### Fixed
+
+- Replace LICENSE text correctly.
+
 ## [1.0.3]
+
+### Changed
 
 - Upgrade dependencies.
 - Change LICENSE from BSD-2-Clause to MIT.
