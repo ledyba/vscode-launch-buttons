@@ -6,6 +6,14 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.5]
+
+### Changed
+
+- Clealify `run` task selection order.
+  - If a task in tasks.json that contains `run` in name, it will be executeed.
+  - If a global that contains `run` in name, it will be executed.
+
 ## [1.0.4]
 
 ### Fixed
