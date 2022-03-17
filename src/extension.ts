@@ -10,10 +10,31 @@ export function activate(context: vscode.ExtensionContext) {
   .then(() => {
     context.subscriptions.push(vscode.commands.registerCommand('launch-buttons.run', () => {
       vscode.tasks.fetchTasks().then((tasks) => {
+        let globalTask: vscode.Task | null = null;
+        let workspaceTask: vscode.Task | null = null;
+        let defaultTask: vscode.Task | null = null;
         for(const task of tasks) {
           if(kRunRegexp.test(task.name)){
-            return task;
+            switch(task.scope) {
+              case vscode.TaskScope.Global:
+                globalTask = task;
+                break;
+              case vscode.TaskScope.Workspace:
+                workspaceTask = task;
+                break;
+              default:
+                defaultTask = task;
+            }
           }
+        }
+        if(workspaceTask != null) {
+          return workspaceTask;
+        }
+        if(globalTask != null) {
+          return globalTask;
+        }
+        if(defaultTask != null) {
+          return defaultTask;
         }
         return null;
       }).then((runTask: vscode.Task | null) => {
