@@ -27,7 +27,12 @@ export function activate(context: vscode.ExtensionContext) {
               }
             }
           } else {
-            if(task.scope !== undefined && task.scope !== vscode.TaskScope.Global && task.group?.isDefault === true) {
+            if(
+              task.scope !== undefined &&
+              task.scope !== vscode.TaskScope.Global &&
+              task.source.toLowerCase() === "workspace" &&
+              task.group?.isDefault === true
+            ) {
               defaultTask = task;
             }
           }
