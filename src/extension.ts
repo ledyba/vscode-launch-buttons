@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
         let workspaceFolderTask: vscode.Task | null = null;
         let defaultTask: vscode.Task | null = null;
         for(const task of tasks) {
-          if(kRunRegexp.test(task.name)){
+          if(kRunRegexp.test(task.name)) {
             if (task.scope === vscode.TaskScope.Global) {
               globalTask = task;
             } else if (task.scope === vscode.TaskScope.Workspace) {
