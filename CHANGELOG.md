@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.12]
+
+- Fix a bug.
+
 ## [1.0.11]
 
 - Exlude tasks without scopes, which can be confusing.
