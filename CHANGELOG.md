@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.9]
+
+- Support workspace folder tasks.
+
 ## [1.0.8]
 
 - Upgrade dependencies.
