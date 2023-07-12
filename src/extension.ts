@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
             } else if (task.scope === vscode.TaskScope.Workspace) {
               workspaceTask = task;
             } else if (task.scope === undefined) {
-              defaultTask = task;
+              continue;
             } else {
               workspaceFolderTask = task;
             }
