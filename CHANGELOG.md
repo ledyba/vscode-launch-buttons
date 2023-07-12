@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.13]
+
+- Now runs default task when there is no tasks with 'run'.
+
 ## [1.0.12]
 
 - Fix a bug.
