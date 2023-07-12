@@ -25,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
               workspaceFolderTask = task;
             }
           } else {
-            if(task.group?.isDefault === true) {
+            if(task.scope !== undefined && task.scope !== vscode.TaskScope.Global && task.group?.isDefault === true) {
               defaultTask = task;
             }
           }
