@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
             } else if (task.scope === undefined) {
               continue;
             } else {
-              if(task.source.toLowerCase() === "workspace") {
+              if(task.source.toLowerCase() === 'workspace') {
                 workspaceFolderTask = task;
               }
             }
@@ -30,7 +30,7 @@ export function activate(context: vscode.ExtensionContext) {
             if(
               task.scope !== undefined &&
               task.scope !== vscode.TaskScope.Global &&
-              task.source.toLowerCase() === "workspace" &&
+              task.source.toLowerCase() === 'workspace' &&
               task.group?.isDefault === true
             ) {
               defaultTask = task;
