@@ -15,15 +15,17 @@ export function activate(context: vscode.ExtensionContext) {
         let defaultTask: vscode.Task | null = null;
         for(const task of tasks) {
           if(kRunRegexp.test(task.name)) {
-            if (task.scope === vscode.TaskScope.Global) {
+            if (task.scope === undefined || task.scope === null) {
+              continue;
+            } else if (task.scope === vscode.TaskScope.Global) {
               continue;
             } else if (task.scope === vscode.TaskScope.Workspace) {
               workspaceTask = task;
-            } else if (task.scope === undefined) {
-              continue;
+              break;
             } else {
               if(task.source.toLowerCase() === 'workspace') {
                 workspaceFolderTask = task;
+                break;
               }
             }
           } else {
@@ -34,6 +36,7 @@ export function activate(context: vscode.ExtensionContext) {
               task.group?.isDefault === true
             ) {
               defaultTask = task;
+              break;
             }
           }
         }
@@ -44,6 +47,7 @@ export function activate(context: vscode.ExtensionContext) {
           return workspaceFolderTask;
         }
         if(defaultTask !== null) {
+          vscode.window.showWarningMessage(`Executing task: ${defaultTask.name}(${defaultTask.group?.id}) as a fallback.`);
           return defaultTask;
         }
         return null;
