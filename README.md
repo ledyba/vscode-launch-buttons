@@ -2,7 +2,7 @@
 
 Add "Run" and "Debug" button to execute commands in launch.json in your vscode.
 
-![screenshot](https://raw.githubusercontent.com/ledyba/vscode-launch-buttons/magistra/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/ledyba/vscode-launch-buttons/magistra/.github/screenshot.png)
 
 [Available on market place](https://marketplace.visualstudio.com/items?itemName=ledyba.launch-buttons)!
 
