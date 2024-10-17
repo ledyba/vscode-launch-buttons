@@ -11,7 +11,7 @@ Add "Run" and "Debug" button to execute commands in launch.json in your vscode.
 ### Run button
 
 1. If there is a task whose `label` contains 'run' in `task.json`, run button executes that task.
-2. If there is a task with `group.isDefault` in `task.json`, run button executes that task as a fallback.
+2. If there is a task whose `group.isDefault = true` in `task.json`, run button executes that task as a fallback.
 3. If all conditions are not met, the button executes the selected configuretion in `launch.json` without debugger (You can select a configuretion in debug panel).
 
 ### Debug button
