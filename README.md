@@ -33,3 +33,8 @@ These icons are drawn by myself:
 # LICENSE
 
 MIT
+
+<!--
+To publish:
+https://marketplace.visualstudio.com/manage/publishers/ledyba
+-->
